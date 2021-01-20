@@ -1,0 +1,24 @@
+22
+Dubai,Bangkok
+London,Hong Kong
+Amsterdam,Seoul
+Paris,Singapore
+Frankfurt,Istanbul
+Taipei,Kuala Lumpur
+London,Madrid
+Barcelona,Munich
+Tokyo,Doha
+New York,Toronto
+Los Angeles,Houston
+Dubai,London
+Hong Kong,Amsterdam
+Seoul,Munich
+Singapore,Frankfurt
+Bangkok,Istanbul
+Taipei,London
+Amsterdam,Madrid
+Barcelona,Amsterdam
+Tokyo,Moscow
+Los Angeles,Toronto
+Singapore,Dubai
+Singapore,Munich

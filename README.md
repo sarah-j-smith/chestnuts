@@ -52,6 +52,42 @@ To run:
 
     ./fizzbuzz
 
+*Input*
+
+The fizzbuzz series is hard-coded to 50, as per the question text. No user input is required.
+
+## powerof
+
+Find if a number is a power of another number. From a [post by American Dreamer](https://hardcoded.medium.com/coding-interview-question-for-sdet-role-daa0c8eb230f)
+
+> Initally write a program to check if given number is power of three. What about other bases than 3?
+
+    cd powerof
+    g++ -O powerof.cpp -o powerof
+    ./powerof
+
+*Input*
+
+to ask if 19683 is a power of 3, start the program, type `19683` and press `<ctrl>-D` (EOF). As per the spec,
+the base of 3 is the default.  If `true` is the result, that means, yes it is a power of 3:
+
+    ./powerof
+    19683<EOF>
+    true
+
+to ask if 125 is a power of 5, start the program, type `125` and press `<enter>`, then type 5, then press `<enter>`:
+
+    ./powerof
+    25
+    5
+    true
+
+*Tests*
+
+    cd test
+    g++ -std=c++17 -stdlib=libc++ -Wall -O powerof.cpp -o powerof
+    ./powerof
+
 ## graphspan
 
 Determine if a graph contains a specified path.
@@ -77,7 +113,6 @@ To run tests:
 
     cd test
     g++ -std=c++17 -stdlib=libc++ -Wall -O graphspan.cpp -o graphspan
-
     ./graphspan
 
 The tests use [doctest](https://github.com/onqtam/doctest) which is simply included here as a header file.

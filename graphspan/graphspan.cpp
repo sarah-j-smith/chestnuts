@@ -1,12 +1,3 @@
-//
-//  main.cpp
-//  foobar2
-//
-//  Created by Sarah Smith on 19/1/21.
-//
-
-#include <iostream>
-
 #include <iostream>
 #include <istream>
 #include <optional>

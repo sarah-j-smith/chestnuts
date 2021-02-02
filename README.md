@@ -3,14 +3,16 @@
 Some average to middling solutions to the chestnut questions that
 sometimes get posed in tech interviews.
 
-No attempt has been made to be clever, or to add unit tests or anything
-like that.  This is basically as I would do if I were actually in an
-interview.
+No attempt has been made to be clever.  This is basically as I would do 
+if I were actually in an interview.
 
-## Update
+## Unit tests
 
-The `graphspan` example at the end was a bit more complex so I added unit
-tests and some example data for that.
+Some of the examples are a bit more complex and inspection alone is not a good
+guide to correctness. For this reason I've included unit tests for some of the
+examples, even though I'd never have time in an interview setting to do this.
+
+For the same reason there's example data for some of them as well.
 
 ## Pre-Requisites
 
@@ -21,6 +23,8 @@ command line.
 
 Config files for Visual Studio Code are included in case that's installed.
 To use these, install the C/C++ extension.
+
+# Code and Howto
 
 ## fibonacci 
 
@@ -93,26 +97,30 @@ to ask if 125 is a power of 5, start the program, type `125` and press `<enter>`
 Determine if a graph contains a specified path.
 
 > Input shall be as follows:
+
 > line 0: n
+
 > Next n lines: A,B - where A and B are city names
+
 > Last line S,D - source and dest to find path
+
 > Print "true" or "false" if a path exists
 
 Note that this is a reduced requirement from a more general shortest path
-search which can be solved by A* or Djikstra's algorithm. This does not
+search which can be solved by Djikstra's algorithm. This does not
 require printing the path, or finding a shortest path - so it can exit early.
 
 To run:
 
     cd graphspan
-    g++ -std=c++17 -stdlib=libc++ -Wall -O graphspan.cpp -o graphspan
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o graphspan graphspan.cpp
 
     ./graphspan < example.txt
 
 To run tests:
 
     cd test
-    g++ -std=c++17 -stdlib=libc++ -Wall -O graphspan.cpp -o graphspan
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o graphspan graphspan.cpp
     ./graphspan
 
 The tests use [doctest](https://github.com/onqtam/doctest) which is simply included here as a header file.
@@ -120,3 +128,37 @@ The tests use [doctest](https://github.com/onqtam/doctest) which is simply inclu
 ![screenshot](doc/passing-tests.png)
 
 If the tests are passing the result should look as above.
+
+## bubblesort
+
+Sort a list of integer numbers using the bubblesort algorithm.
+
+> Input shall be as follows:
+
+> line 0: n
+
+> Next line: n integer numbers seperated by spaces
+
+> Print the list of n integers in sorted order (low to high)
+
+To run:
+
+    cd bubblesort
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o bubblesort bubblesort.cpp
+    ./bubblesort < example.txt
+
+To run tests:
+
+    cd test
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o bubblesort bubblesort.cpp
+    ./bubblesort
+
+### random
+
+Trivial command line tool to create random numbers, which I put in the bubble 
+sort example text files.
+
+    cd random
+    gcc random.c -o rand
+    echo 18 > example.txt
+    (for i in `seq 1 18`; do r=`./rand`; echo -n "$r "; done; echo "") >> example.txt

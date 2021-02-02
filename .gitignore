@@ -2,3 +2,6 @@ fizzbuzz/fizzbuzz
 fibonacci/fibonacci
 graphspan/graphspan
 test/graphspan
+test/bubblesort
+bubblesort/bubblesort
+random/rand

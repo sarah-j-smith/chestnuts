@@ -5,3 +5,4 @@ test/graphspan
 test/bubblesort
 bubblesort/bubblesort
 random/rand
+*.dSYM/

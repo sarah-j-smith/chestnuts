@@ -25,6 +25,23 @@ static inline void trim(std::string &s) {
     rtrim(s);
 }
 
+
+/**
+ * Returns the sub-strings within the given input_values seperated by a linefeed.
+ */
+std::vector<std::string> componentsSeperatedByLinefeed(std::string input_values)
+{
+    auto components = std::vector<std::string>();
+    std::stringstream input_stream(input_values);
+    std::string buf;
+    while (std::getline(input_stream, buf))
+    {
+        trim(buf);
+        components.push_back(buf);
+    }
+    return components;
+}
+
 /**
  * Start the given program, send all of the lines in the given test_input to that
  * program, and then collect all its output. The program must send EOF or else
@@ -52,12 +69,10 @@ std::vector<std::string> runprog(std::string prog, std::vector<std::string> test
     while ( fgets(buf, sizeof(buf) - 1, handle )) {
         result_str.append(buf);
     }
-    trim(result_str);
-    if (result_str.size() > 0) {
-        results.push_back( result_str );
-    }
 
     pclose(handle);
+
+    results = componentsSeperatedByLinefeed(result_str);
 
     return results;
 }

@@ -20,35 +20,35 @@
     // ],
     "version": "2.0.0",
     "configurations": [
-        // {
-        //     "name": "C++ Launch",
-        //     "type": "cppdbg",
-        //     "request": "launch",
-        //     "program": "${fileDirname}/${fileBasenameNoExtension}",
-        //     "preLaunchTask": "C/C++: clang build active file",
-        //     "internalConsoleOptions": "openOnSessionStart",
-        //     "logging": {
-        //         "moduleLoad": false,
-        //         "programOutput": true,
-        //         "trace": false
-        //     },
-        //     "showDisplayString": false,
-        //     "args": [],
-        //     "stopAtEntry": true,
-        //     "cwd": "${workspaceFolder}",
-        //     "environment": [],
-        //     "externalConsole": false, // set true to enable keyboard input
-        //     "osx": {
-        //         "MIMode": "lldb"
-        //     }
-        // },
         {
-            "name": "Launch",
-            "type": "lldb",
+            "name": "C++ Launch",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "preLaunchTask": "C/C++: DEBUG clang build active file",
+            "internalConsoleOptions": "openOnSessionStart",
+            "logging": {
+                "moduleLoad": false,
+                "programOutput": true,
+                "trace": false
+            },
+            "showDisplayString": false,
+            "stopAtEntry": true,
             "cwd": "${fileDirname}",
-            //"args": ["-arg1", "-arg2"],
-        }
+            // "args": ["<", "test1.txt"],
+            "environment": [],
+            "externalConsole": true, // set true to enable keyboard input
+            "osx": {
+                "MIMode": "lldb"
+            }
+        },
+        // {
+        //     "name": "Launch",
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "program": "${fileDirname}/${fileBasenameNoExtension}",
+        //     "cwd": "${fileDirname}",
+        //     "console": "integratedTerminal",
+        // }
     ]
 }

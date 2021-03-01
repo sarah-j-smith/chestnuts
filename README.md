@@ -129,6 +129,33 @@ The tests use [doctest](https://github.com/onqtam/doctest) which is simply inclu
 
 If the tests are passing the result should look as above.
 
+## primes
+
+
+> Input an integer N and then input N integers p to test if they are prime.
+
+>  A prime is a natural number greater than 1 that has no positive divisors 
+>  other than 1 and itself. 
+
+>  Given each number, p, find and print whether it is Prime or Not Prime.
+
+>  Note that 1 is not prime, and 2 is prime. Negative numbers cannot 
+>  be prime, but negative inputs are out of scope.
+
+
+To run:
+
+    cd primes
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o primes primes.cpp
+
+    ./primes < test1.txt
+
+To run tests:
+
+    cd test
+    g++ -std=c++17 -stdlib=libc++ -Wall -O -o primes primes.cpp
+    ./primes
+
 ## bubblesort
 
 Sort a list of integer numbers using the bubblesort algorithm.

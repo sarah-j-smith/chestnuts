@@ -16,9 +16,16 @@ public:
             auto distBsquared = (b[0] * b[0] + b[1] * b[1]);
             return distAsquared < distBsquared;
         };
-        // max heap priority queue with largest element at the top
+        // Include the underlying container to help with class template
+        // argument deduction
         vector<vector<int>> pq_store;
+
+        // max heap priority queue with largest element at the top
+        // largest here will mean the farthest from [0, 0]
+        // under the hood C++ STL uses a heap for this with pq_store
+        // as the array. pop() and push() maintain the heap order
         priority_queue pq{point_compare, pq_store};
+
         for (auto it = points.cbegin(); it != points.cend(); ++it)
         {
             // push into the heap, and (via priority queue implementation)

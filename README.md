@@ -345,7 +345,36 @@ The result will be eg:
 5
 ```
 
-## Run all tests
+----
+
+## K-Closest Points
+
+> Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an
+> integer k, return the k closest points to the origin (0, 0).
+>
+> The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2).
+>
+> You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
+
+
+This [problem from leetcode](https://leetcode.com/problems/k-closest-points-to-origin/) is best
+solved with a priority queue.
+
+In C++ 17 with good type deduction we can write quite elegant code using the `std::priority_queue` class
+from the `<queue>` header. The most important part to get right is the functor that calculates the
+ordering of the points. See the comments in the code.
+
+Because of LeetCode's use of a class for the solution I've just used a doctest for this one.
+
+```
+cd test
+g++ -std=c++17 -stdlib=libc++ -DPRINT_TABLE=1 -I ./include -I ../include -Wall -O kclosest.cpp -o kclosest
+./kclosest
+```
+
+----
+
+# Run all tests
 
 Use the script `runall.sh` which will attempt to compile all problems and then run the tests.
 

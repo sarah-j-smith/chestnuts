@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <sstream>
 
 // trim from start (in place)
 static inline void ltrim(std::string &s) {
@@ -37,6 +38,23 @@ std::vector<std::string> componentsSeperatedByLinefeed(std::string input_values)
     while (std::getline(input_stream, buf))
     {
         trim(buf);
+        components.push_back(buf);
+    }
+    return components;
+}
+
+
+/**
+ * Returns the sub-strings within the given input_values seperated by a whitespace.
+ */
+std::vector<std::string> split_string(std::string input_values)
+{
+    auto components = std::vector<std::string>();
+    std::stringstream input_stream(input_values);
+    std::string buf;
+    while (input_stream)
+    {
+        input_stream >> buf;
         components.push_back(buf);
     }
     return components;

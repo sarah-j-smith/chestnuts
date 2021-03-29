@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-#include "commandline.h"
+#include "commandline.hpp"
 
 // Input an integer N and then input N integers p to test if they are prime.
 //

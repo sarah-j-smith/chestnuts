@@ -8,6 +8,8 @@
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
+                "-I", "./include",
+                "-I", "../include",
                 "-Wall",   // a reasonable level of warnings
                 "-O",      // a reasonable level of optimizations
                 "${file}",
@@ -33,6 +35,8 @@
                 "-g",
                 "-std=c++17",
                 "-stdlib=libc++",
+                "-I", "./include",
+                "-I", "../include",
                 "-D_DEBUG",
                 "${file}",
                 "-o",

@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-#include "commandline.h"
+#include "commandline.hpp"
 
 TEST_CASE("testing with 3 numbers case") {
 
@@ -32,7 +32,7 @@ TEST_CASE("testing the empty case") {
     };
     auto output_lines = runprog("../bubblesort/bubblesort", input_lines);
 
-    CHECK(output_lines.size() == 0);
+        CHECK(output_lines[0] == "");
 }
 
 TEST_CASE("larger list with 22 values positive numbers") {

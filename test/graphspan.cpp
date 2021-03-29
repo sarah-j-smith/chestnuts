@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-#include "commandline.h"
+#include "commandline.hpp"
 
 TEST_CASE("testing the graphspan 3 routes success case") {
 

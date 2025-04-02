@@ -310,6 +310,9 @@ g++ -std=c++17 -stdlib=libc++ -I ./include -I ../include -Wall -O coins.cpp -o c
 ./coins < test.txt
 ```
 
+The first line of the test data contains N (the amount to make in change) and then count 
+of the denominations.
+
 To test:
 
 ```

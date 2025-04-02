@@ -42,6 +42,7 @@ int ways(int n, vector<int> coins) {
     return change_table[n];
 }
 
+// This is the main entry point
 int main()
 {
     string nm_temp;
